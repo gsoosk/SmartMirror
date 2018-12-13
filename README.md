@@ -60,5 +60,7 @@ Put a bunch of adhesive on the back of the device, and stick it on there.
 
 ## Resources : 
 [Max Braun Great Post](https://medium.com/@maxbraun/my-bathroom-mirror-is-smarter-than-yours-94b21c6671ba)
+
 [HomeMirror by Hannah Mitt](https://github.com/HannahMitt/HomeMirror)
+
 [Calender](https://github.com/Roojin/persian-calendar-view)
