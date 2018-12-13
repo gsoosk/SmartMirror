@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:paddingLeft="@dimen/outside_padding"
+    android:paddingRight="@dimen/outside_padding"
+    android:background="#000000">
+
+  <!-- Weather -->
+  <TextView
+      android:id="@+id/temperature"
+      style="@style/TemperatureStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:gravity="left"
+      tools:text="72°"/>
+
+  <ImageView
+      android:id="@+id/icon"
+      android:layout_width="@dimen/weather_icon_size"
+      android:layout_height="@dimen/weather_icon_size"
+      android:layout_alignBottom="@id/temperature"
+      android:layout_marginBottom="15dp"
+      android:layout_marginLeft="5dp"
+      android:layout_toRightOf="@id/temperature"
+      android:scaleType="fitXY"
+      tools:src="@drawable/partly_cloudy_day" />
+  <TextView
+      android:id="@+id/weather_summary"
+      style="@style/WeatherTextStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@id/temperature"
+      android:gravity="left"
+      android:maxWidth="380dp"
+      tools:text="Mostly cloudy until tomorrow evening"/>
+
+  <!-- Time and date -->
+  <TextView
+      android:id="@+id/precipitation"
+      style="@style/WeatherTextStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@id/weather_summary"
+      android:layout_marginTop="@dimen/precipitation_margin"
+      android:drawableLeft="@drawable/umbrella"
+      android:drawablePadding="@dimen/icon_margin"
+      tools:text="6%" />
+
+  <TextClock
+      android:id="@+id/time"
+      style="@style/TimeStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true"
+      android:format12Hour="h\uee01mm"
+      android:format24Hour="H\uee01mm"
+      android:gravity="right"
+
+      tools:text="12\uee0134"/>
+  <TextClock
+      android:id="@+id/date"
+      style="@style/DateStyle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/time"
+      android:format12Hour="EEEE\nMMMM d"
+      android:format24Hour="EEEE\nd MMMM"
+      android:gravity="right"
+      android:visibility="invisible"
+      tools:text="Sunday\nMarch 4"/>
+
+  <TextView
+      android:id="@+id/today_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/time"
+      style="@style/DateStyle"
+      android:gravity="right"
+      tools:text="Sunday\n 20Azar" />
+
+  <!-- Body -->
+
+  <ir.mirrajabi.persiancalendar.PersianCalendarView
+      android:id="@+id/calen"
+      android:layout_width="314dp"
+      android:layout_height="273dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginBottom="@dimen/news_line_margin"
+      android:layout_marginLeft="@dimen/icon_margin"
+      app:pcv_colorBackground="#000000"
+      app:pcv_colorDayName="#ffffff"
+      app:pcv_colorHoliday="#9ad2f4"
+      app:pcv_colorHolidaySelected="#f1f2f3"
+      app:pcv_colorNormalDay="#f3f4f5"
+      app:pcv_colorNormalDaySelected="#d9d9d9"
+      app:pcv_eventUnderlineColor="#f0fdfd"
+      app:pcv_fontSize="25dp"
+      app:pcv_headersFontSize="26dp" />
+
+  <!-- News -->
+  <LinearLayout
+      android:id="@+id/news"
+      android:layout_width="581dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignStart="@+id/temperature"
+      android:layout_marginBottom="64dp"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/news_1"
+        style="@style/NewsStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/news_line_margin"
+        android:drawablePadding="@dimen/icon_margin"
+        android:drawableRight="@drawable/news"
+        android:textAlignment="viewEnd"
+        android:visibility="invisible"
+        tools:text="U.S. judge sends ex-Trump campaign head Manafort to jail until trial" />
+
+    <TextView
+        android:id="@+id/news_2"
+        style="@style/NewsStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/news_line_margin"
+        android:drawablePadding="@dimen/icon_margin"
+        android:drawableRight="@drawable/news"
+        android:textAlignment="viewEnd"
+        android:visibility="invisible"
+        tools:text="Trump sets tariffs on $50 billion in Chinese goods; Beijing strikes back" />
+
+    <TextView
+        android:id="@+id/news_3"
+        style="@style/NewsStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/news_line_margin"
+        android:drawablePadding="@dimen/icon_margin"
+        android:drawableRight="@drawable/news"
+        android:textAlignment="viewEnd"
+        android:visibility="invisible"
+        tools:text="Afghanistan Eid car bomb, claimed by Islamic State, kills 26" />
+
+    <TextView
+        android:id="@+id/news_4"
+        style="@style/NewsStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/news_line_margin"
+        android:drawablePadding="@dimen/icon_margin"
+        android:drawableRight="@drawable/news"
+        android:textAlignment="viewEnd"
+        android:visibility="invisible"
+        tools:text="U.S. prosecutors pull encrypted messages from phones seized in Cohen raids" />
+
+    <TextView
+        android:id="@+id/news_5"
+        style="@style/NewsStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/news_line_margin"
+        android:drawablePadding="@dimen/icon_margin"
+        android:drawableRight="@drawable/news"
+        android:textAlignment="viewEnd"
+        android:visibility="invisible"
+        tools:text="Trump quip about North Korea's Kim sparks outcry on social media" />
+  </LinearLayout>
+
+  <!-- Commute -->
+  <FrameLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+
+      android:layout_alignParentRight="true"
+      android:layout_below="@id/date"
+      android:visibility="invisible">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:id="@+id/travelMode"
+          android:layout_width="@dimen/traffic_icon_size"
+          android:layout_height="@dimen/traffic_icon_size"
+          android:layout_gravity="center_vertical"
+          android:layout_marginRight="@dimen/icon_margin"
+          tools:src="@drawable/driving" />
+
+      <ImageView
+          android:id="@+id/trafficTrend"
+          android:layout_width="@dimen/traffic_icon_size"
+          android:layout_height="@dimen/traffic_icon_size"
+          android:layout_gravity="center_vertical"
+          android:layout_marginRight="@dimen/icon_margin"
+          tools:src="@drawable/trend_up" />
+
+      <TextView
+          android:id="@+id/commuteText"
+          style="@style/CommuteTextStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          tools:text="39 mins via US-101" />
+    </LinearLayout>
+  </FrameLayout>
+
+
+</RelativeLayout>
