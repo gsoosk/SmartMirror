@@ -22,6 +22,7 @@ This application contains :
 Making a Mirror
 ====
 ![My mirror](https://github.com/gsoosk/SmartMirror/blob/master/pic3.jpg)
+
 [A tutorial video to make a smart mirror](https://learn.adafruit.com/android-smart-home-mirror)
 
 1. Obtain Android device
