@@ -9,7 +9,7 @@ This application contains :
 * Persian Calendar 
 * RSS news 
 
-![alt text](https://github.com/gsoosk/SmartMirror/blob/master/pic1.jpg)
+![alt text](https://github.com/gsoosk/SmartMirror/blob/master/pic1.png)
 
 ## How to run ?
 1. Clone Project
@@ -58,4 +58,7 @@ You probably want a long usb cable. Find a wall spot where you can keep the devi
 
 Put a bunch of adhesive on the back of the device, and stick it on there.
 
-
+## Resources : 
+[Max Braun Great Post](https://medium.com/@maxbraun/my-bathroom-mirror-is-smarter-than-yours-94b21c6671ba)
+[HomeMirror by Hannah Mitt](https://github.com/HannahMitt/HomeMirror)
+[Calender](https://github.com/Roojin/persian-calendar-view)
